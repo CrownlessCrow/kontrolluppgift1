@@ -1,4 +1,4 @@
-using System.ComponentModel;
+
 
 Console.WriteLine("---Welcome to GroceryList");
 
@@ -8,6 +8,7 @@ List<int> pris = [];
 
 while (true)
 {
+   
 
 if (groceryList.Count == 0)
 
@@ -25,8 +26,8 @@ else
         int sum = pris.Sum();
         Console.WriteLine($"Total priset blir {sum}kr");
     } 
-Console.WriteLine("Skriv in en matvara eller skriv en siffra för att ta bort");
-string inputMat = Console.ReadLine();
+Console.WriteLine("1. Skriv in en matvara \n2. eller skriv en siffra för att ta bort, \n3. eller skriv 'dyrast' för att veta dyraste pris");
+string inputMat = Console.ReadLine()!;
 
     
 if (int.TryParse(inputMat, out int remove))
@@ -62,7 +63,7 @@ else if (inputMat == "dyrast")
 else
     {
     Console.WriteLine("Skriv in pris:");
-    string inputPrisText = Console.ReadLine();
+    string inputPrisText = Console.ReadLine()!;
 
     if (int.TryParse(inputPrisText, out int inputPris ))
 
@@ -74,8 +75,6 @@ else
         {
             Console.WriteLine("Ogiltigt pris, du måste skrifa siffra");  
         }
-
-            Console.WriteLine("");
 
 
 
