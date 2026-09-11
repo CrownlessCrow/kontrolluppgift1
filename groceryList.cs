@@ -33,7 +33,7 @@ string inputMat = Console.ReadLine();
     
 if (int.TryParse(inputMat, out int remove))
 
-{
+    {
     if (remove >= 1 && remove <= groceryList.Count)
         {
            Console.WriteLine($"Ta bort {groceryList[remove - 1]}, {pris[remove - 1]}  ");
@@ -45,5 +45,26 @@ if (int.TryParse(inputMat, out int remove))
         Console.WriteLine($"Det finns ingen {remove}");
         }
 
-}
+    }
+else
+    {
+    Console.WriteLine("Skriv in pris:");
+    string inputPrisText = Console.ReadLine();
+
+    if (int.TryParse(inputPrisText, out int inputPris ))
+
+        {
+            groceryList.Add(inputMat);
+            pris.Add(inputPris);  
+        }
+    else
+        {
+            Console.WriteLine("Ogiltigt pris, du måste skrifa siffra");  
+        }
+
+            Console.WriteLine("");
+
+
+
+    }
 }
